@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Champs du formulaire
     private EditText etNom, etEmail, etPhone, etAdresse, etVille;
-    private Button btnEnvoyer;
+    private Button btnAjouter, btnChercher, btnSupprimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,19 @@ public class MainActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.phone);
         etAdresse = findViewById(R.id.adresse);
         etVille = findViewById(R.id.ville);
-        btnEnvoyer = findViewById(R.id.btnEnvoyer);
+        btnAjouter = findViewById(R.id.btnAjouter);
+        btnChercher = findViewById(R.id.btnChercher);
+        btnSupprimer = findViewById(R.id.btnSupprimer);
 
-        // Définition du comportement du bouton Envoyer
-        btnEnvoyer.setOnClickListener(view -> envoyerDonnees());
+        // Définition du comportement du bouton Ajouter (anciennement Envoyer)
+        btnAjouter.setOnClickListener(view -> envoyerDonnees());
+
+        // Placeholders pour les autres actions
+        btnChercher.setOnClickListener(view -> 
+            Toast.makeText(this, "Action: Chercher", Toast.LENGTH_SHORT).show());
+        
+        btnSupprimer.setOnClickListener(view -> 
+            Toast.makeText(this, "Action: Supprimer", Toast.LENGTH_SHORT).show());
     }
 
     /**

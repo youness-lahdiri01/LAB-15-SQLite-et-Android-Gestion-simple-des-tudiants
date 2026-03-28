@@ -74,12 +74,36 @@
             android:hint="Ex : Marrakech"
             android:inputType="textCapWords"/>
 
-        <Button
-            android:id="@+id/btnEnvoyer"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Envoyer"
-            android:layout_marginTop="20dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnAjouter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ajouter"
+                android:layout_marginEnd="5dp"/>
+
+            <Button
+                android:id="@+id/btnChercher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chercher"
+                android:layout_marginHorizontal="5dp"/>
+
+            <Button
+                android:id="@+id/btnSupprimer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Supprimer"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
